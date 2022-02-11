@@ -1,15 +1,20 @@
 # anim.js
- text **an***ima****tor***
+## parse-g
+### text **anim**ator
 
-documentation
-- install from npm
+
+install
 ```ps
 npm i anim.js --save
 ```
 
-- use in project
+use in project
 ```js
-const anim = require('anim.js')`` OR ``import { Animate } from 'anim.js'
+const anim = require('anim.js')
+```
+## *OR*
+```js
+import { Animate } from 'anim.js'
 ```
 
 ### Actions
