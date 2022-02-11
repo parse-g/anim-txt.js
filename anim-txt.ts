@@ -18,7 +18,7 @@ interface Default {
   };
 }
 // экспорт класс анимаций
-export default class AnimateTxT {
+export class AnimateTxT {
   [key: string]: any;
   // Задание стандартных настроек
   static default: Default = {
