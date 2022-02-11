@@ -18,7 +18,7 @@ interface Default {
   };
 }
 // экспорт класс анимаций
-export class Animate {
+export default class Animate {
   [key: string]: any;
   // Задание стандартных настроек
   static default: Default = {

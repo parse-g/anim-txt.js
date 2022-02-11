@@ -1,5 +1,5 @@
 'use strict';
-export class Animate {
+export default class Animate {
     static default = {
         time: 1500,
         text: 'Hello, world!',
