@@ -1,20 +1,20 @@
-# anim.js
+# anim-**T**x**T**.js
 ## parse-g
-### text **anim**ator
+### text **anim**/ **T**x**T**
 
 
 install
 ```ps
-npm i anim.js --save
+npm i anim-txt.js --save
 ```
 
 use in project
 ```js
-const anim = require('anim.js')
+const AnimateTxT = require('anim-txt.js')
 ```
 ## *OR*
 ```js
-import { Animate } from 'anim.js'
+import { AnimateTxT } from 'anim-txt.js'
 ```
 
 ### Actions
@@ -36,7 +36,7 @@ import { Animate } from 'anim.js'
         mode: 'half',
         ms: 1500,
       },
-      text: 'Animate!',
+      text: 'AnimateTxT!',
     },
   }
 ```
@@ -55,7 +55,7 @@ const settings = {
     },
 }
 
-const myAnim = new Animate(settings)
+const myAnim = new AnimateTxT(settings)
 ```
 
 settings
@@ -90,43 +90,43 @@ myAnim.settings
 ### *Point animation*
 
 ```js
-Animate.point({text: 'my text', point: 'p', all_time: 1500})
+AnimateTxT.point({text: 'my text', point: 'p', all_time: 1500})
 ```
 
 in typescript
 ````ts
-Animate.point({text: string, point: string, all_time: number})
+AnimateTxT.point({text: string, point: string, all_time: number})
 ````
-
+---
 ### *Print animation*
 
 ```js
-Animate.print({text: 'my text', all_time: 1500})
+AnimateTxT.print({text: 'my text', all_time: 1500})
 ```
 
 in typescript
 ````ts
-Animate.print({text: string, all_time: number})
+AnimateTxT.print({text: string, all_time: number})
 ````
-
+---
 ### *Wawe animation*
 
 ```js
-Animate.wawe({text: 'my text', all_time: 1500})
+AnimateTxT.wawe({text: 'my text', all_time: 1500})
 ```
 
 in typescript
 ````ts
-Animate.wawe({text: string, all_time: number})
+AnimateTxT.wawe({text: string, all_time: number})
 ````
-
+---
 ### *Line animation*
 
 ```js
-Animate.line({text: 'my text', all_time: 1500})
+AnimateTxT.line({text: 'my text', all_time: 1500})
 ```
 
 in typescript
 ````ts
-Animate.line({text: string, all_time: number})
+AnimateTxT.line({text: string, all_time: number})
 ````
