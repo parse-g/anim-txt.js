@@ -168,31 +168,4 @@ export class Animate {
   }
 }
 
-// тест
-async function test(): Promise<void> {
-  console.log(Animate.default);
-  console.log('\n');
-  await Animate.line();
-  console.log('\n');
-  await Animate.point();
-  console.log('\n');
-  await Animate.print();
-  Animate.wawe();
-}
-
-async function testConstruct(): Promise<void> {
-  const animCustom: Animate = new Animate({
-    time: { mode: 'half', ms: 1500 },
-    replace: false,
-    backReplace: {
-      value: true,
-      point: '#',
-    },
-  });
-  console.log(animCustom.settings);
-  await animCustom.play();
-}
-
-testConstruct();
-
 // by «parse-g»
