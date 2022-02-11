@@ -1,11 +1,11 @@
 # anim-**T**x**T**.js
 ## parse-g
-### text **anim**/ **T**x**T**
+### the text **animator**
 
 
 install
 ```ps
-npm i anim-txt.js --save
+npm i anim-txt.js
 ```
 
 use in project
