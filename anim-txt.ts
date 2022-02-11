@@ -18,7 +18,7 @@ interface Default {
   };
 }
 // экспорт класс анимаций
-export default class Animate {
+export default class AnimateTxT {
   [key: string]: any;
   // Задание стандартных настроек
   static default: Default = {
@@ -35,16 +35,16 @@ export default class Animate {
         mode: 'half',
         ms: 1500,
       },
-      text: 'Animate!',
+      text: 'AnimateTxT!',
     },
   };
 
   // конструктор анимаций
   constructor({
-    replace = Animate.default.construct.replace,
-    time = Animate.default.construct.time,
-    text = Animate.default.construct.text,
-    backReplace = Animate.default.construct.backReplace,
+    replace = AnimateTxT.default.construct.replace,
+    time = AnimateTxT.default.construct.time,
+    text = AnimateTxT.default.construct.text,
+    backReplace = AnimateTxT.default.construct.backReplace,
   } = {}) {
     this.settings = {
       replace,
@@ -73,7 +73,7 @@ export default class Animate {
           process.stdout.write(text[key]); // печать текущей буквы
         }
 
-        await Animate.sleep(time); // ждать расчитаное время
+        await AnimateTxT.sleep(time); // ждать расчитаное время
       }
 
       if (this.settings.backReplace.value === true) {
@@ -84,10 +84,10 @@ export default class Animate {
 
           process.stdout.write('\r' + point); // запись точки c заменой
 
-          await Animate.sleep(time); // ждать расчитаное время
+          await AnimateTxT.sleep(time); // ждать расчитаное время
         }
       }
-      await Animate.sleep(all_time); // ждать все время
+      await AnimateTxT.sleep(all_time); // ждать все время
     };
   }
 
@@ -98,9 +98,9 @@ export default class Animate {
 
   // точечная анимация
   static async point({
-    text = Animate.default.text,
-    point = Animate.default.point,
-    all_time = Animate.default.time,
+    text = AnimateTxT.default.text,
+    point = AnimateTxT.default.point,
+    all_time = AnimateTxT.default.time,
   } = {}) {
     const time = Math.floor(all_time / 2) / text.length; // расчет времени в зависимости от длины  текста
 
@@ -108,7 +108,7 @@ export default class Animate {
     for (let key = 0; key < text.length; key++) {
       process.stdout.write(text[key]); // печать буквы без перехода на новую строку
 
-      await Animate.sleep(time); // ждать расчитаное время
+      await AnimateTxT.sleep(time); // ждать расчитаное время
     }
 
     // замена текста точками
@@ -118,25 +118,25 @@ export default class Animate {
 
       process.stdout.write('\r' + point); // запись точки c заменой
 
-      await Animate.sleep(time); // ждать расчитаное время
+      await AnimateTxT.sleep(time); // ждать расчитаное время
     }
   }
 
   // анимация печати
-  static async print({ text = Animate.default.text, all_time = Animate.default.time } = {}) {
+  static async print({ text = AnimateTxT.default.text, all_time = AnimateTxT.default.time } = {}) {
     let time = all_time / text.length; // расчет времени в зависимости от длины текста
 
     for (let key: number = 0; key < text.length; key++) {
       process.stdout.write(text[key]); // печать текущей буквы
 
-      await Animate.sleep(time); // ждать расчитаное время
+      await AnimateTxT.sleep(time); // ждать расчитаное время
     }
 
-    await Animate.sleep(all_time); // ждать все время
+    await AnimateTxT.sleep(all_time); // ждать все время
   }
 
   // волнистая анимация
-  static async wawe({ text = Animate.default.text, all_time = Animate.default.time } = {}) {
+  static async wawe({ text = AnimateTxT.default.text, all_time = AnimateTxT.default.time } = {}) {
     const time = all_time / text.length; // расчет времени в зависимости от длины текста
 
     process.stdout.write('\r' + text); // печать текста
@@ -148,23 +148,23 @@ export default class Animate {
           text[key].toUpperCase() +
           text.slice(key + 1).toLowerCase()
       ); // печать текущей буквы
-      await Animate.sleep(time); // ждать расчитаное время
+      await AnimateTxT.sleep(time); // ждать расчитаное время
     }
 
-    await Animate.sleep(all_time); // ждать все время
+    await AnimateTxT.sleep(all_time); // ждать все время
   }
 
   // анимация линейного прокручивания
-  static async line({ text = Animate.default.text, all_time = Animate.default.time } = {}) {
+  static async line({ text = AnimateTxT.default.text, all_time = AnimateTxT.default.time } = {}) {
     const time = all_time / text.length; // расчет времени в зависимости от длины текста
 
     for (let key: number = 0; key < text.length; key++) {
       process.stdout.write('\r' + text.slice(key + 1) + text.slice(0, key) + text[key]); // печать текущей буквы
 
-      await Animate.sleep(time); // ждать расчитанное время
+      await AnimateTxT.sleep(time); // ждать расчитанное время
     }
 
-    await Animate.sleep(all_time); // ждать все время
+    await AnimateTxT.sleep(all_time); // ждать все время
   }
 }
 

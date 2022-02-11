@@ -1,5 +1,5 @@
 'use strict';
-export default class Animate {
+export default class AnimateTxT {
     static default = {
         time: 1500,
         text: 'Hello, world!',
@@ -14,10 +14,10 @@ export default class Animate {
                 mode: 'half',
                 ms: 1500,
             },
-            text: 'Animate!',
+            text: 'AnimateTxT!',
         },
     };
-    constructor({ replace = Animate.default.construct.replace, time = Animate.default.construct.time, text = Animate.default.construct.text, backReplace = Animate.default.construct.backReplace, } = {}) {
+    constructor({ replace = AnimateTxT.default.construct.replace, time = AnimateTxT.default.construct.time, text = AnimateTxT.default.construct.text, backReplace = AnimateTxT.default.construct.backReplace, } = {}) {
         this.settings = {
             replace,
             time,
@@ -42,44 +42,44 @@ export default class Animate {
                 else {
                     process.stdout.write(text[key]);
                 }
-                await Animate.sleep(time);
+                await AnimateTxT.sleep(time);
             }
             if (this.settings.backReplace.value === true) {
                 for (let key = 0; key < text.length + 1; key++) {
                     let point = '';
                     point = point.padEnd(key, this.settings.backReplace.point);
                     process.stdout.write('\r' + point);
-                    await Animate.sleep(time);
+                    await AnimateTxT.sleep(time);
                 }
             }
-            await Animate.sleep(all_time);
+            await AnimateTxT.sleep(all_time);
         };
     }
     static sleep(ms = 2000) {
         return new Promise(end => setTimeout(end, ms));
     }
-    static async point({ text = Animate.default.text, point = Animate.default.point, all_time = Animate.default.time, } = {}) {
+    static async point({ text = AnimateTxT.default.text, point = AnimateTxT.default.point, all_time = AnimateTxT.default.time, } = {}) {
         const time = Math.floor(all_time / 2) / text.length;
         for (let key = 0; key < text.length; key++) {
             process.stdout.write(text[key]);
-            await Animate.sleep(time);
+            await AnimateTxT.sleep(time);
         }
         for (let key = 0; key < text.length + 1; key++) {
             let point = '';
             point = point.padEnd(key, '.');
             process.stdout.write('\r' + point);
-            await Animate.sleep(time);
+            await AnimateTxT.sleep(time);
         }
     }
-    static async print({ text = Animate.default.text, all_time = Animate.default.time } = {}) {
+    static async print({ text = AnimateTxT.default.text, all_time = AnimateTxT.default.time } = {}) {
         let time = all_time / text.length;
         for (let key = 0; key < text.length; key++) {
             process.stdout.write(text[key]);
-            await Animate.sleep(time);
+            await AnimateTxT.sleep(time);
         }
-        await Animate.sleep(all_time);
+        await AnimateTxT.sleep(all_time);
     }
-    static async wawe({ text = Animate.default.text, all_time = Animate.default.time } = {}) {
+    static async wawe({ text = AnimateTxT.default.text, all_time = AnimateTxT.default.time } = {}) {
         const time = all_time / text.length;
         process.stdout.write('\r' + text);
         for (let key = 0; key < text.length; key++) {
@@ -87,18 +87,16 @@ export default class Animate {
                 text.slice(0, key).toLowerCase() +
                 text[key].toUpperCase() +
                 text.slice(key + 1).toLowerCase());
-            await Animate.sleep(time);
+            await AnimateTxT.sleep(time);
         }
-        await Animate.sleep(all_time);
+        await AnimateTxT.sleep(all_time);
     }
-    static async line({ text = Animate.default.text, all_time = Animate.default.time } = {}) {
+    static async line({ text = AnimateTxT.default.text, all_time = AnimateTxT.default.time } = {}) {
         const time = all_time / text.length;
         for (let key = 0; key < text.length; key++) {
             process.stdout.write('\r' + text.slice(key + 1) + text.slice(0, key) + text[key]);
-            await Animate.sleep(time);
+            await AnimateTxT.sleep(time);
         }
-        await Animate.sleep(all_time);
+        await AnimateTxT.sleep(all_time);
     }
 }
-
-// by parse-g
