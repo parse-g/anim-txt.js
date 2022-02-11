@@ -1,8 +1,8 @@
 {
   "name": "anim-txt.js",
-  "version": "1.0.3",
-  "description": "my own text animator :333",
-  "main": "anim-txt.js",
+  "version": "1.0.4",
+  "description": "my 0wn TexT animator :333!",
+  "main": "anim-txt-main.js",
   "scripts": {
     "test": ""
   },
