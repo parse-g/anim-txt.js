@@ -10,7 +10,7 @@ npm i anim-txt.js
 
 use in project
 ```js
-const AnimateTxT = require('anim-txt.js')
+const { AnimateTxT } = require('anim-txt.js')
 ```
 ## *OR*
 ```js
@@ -88,45 +88,45 @@ myAnim.settings
 
 ---
 ### *Point animation*
-
+**example**
 ```js
 AnimateTxT.point({text: 'my text', point: 'p', all_time: 1500})
 ```
 
-in typescript
+***template***
 ````ts
 AnimateTxT.point({text: string, point: string, all_time: number})
 ````
 ---
 ### *Print animation*
-
+**example**
 ```js
 AnimateTxT.print({text: 'my text', all_time: 1500})
 ```
 
-in typescript
+***template***
 ````ts
 AnimateTxT.print({text: string, all_time: number})
 ````
 ---
 ### *Wawe animation*
-
+**example**
 ```js
 AnimateTxT.wawe({text: 'my text', all_time: 1500})
 ```
 
-in typescript
+***template***
 ````ts
 AnimateTxT.wawe({text: string, all_time: number})
 ````
 ---
 ### *Line animation*
-
+**example**
 ```js
 AnimateTxT.line({text: 'my text', all_time: 1500})
 ```
 
-in typescript
+***template***
 ````ts
 AnimateTxT.line({text: string, all_time: number})
 ````
