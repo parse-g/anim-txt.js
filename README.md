@@ -10,11 +10,11 @@ npm i anim-txt.js
 
 use in project
 ```js
-const { AnimateTxT } = require('anim-txt.js')
+const { AnimateTxT } = require('anim-txt-main.js')
 ```
 ## *OR*
 ```js
-import { AnimateTxT } from 'anim-txt.js'
+import { AnimateTxT } from 'anim-txt-main.js'
 ```
 
 ### Actions
