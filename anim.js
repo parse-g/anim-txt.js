@@ -100,26 +100,5 @@ export class Animate {
         await Animate.sleep(all_time);
     }
 }
-async function test() {
-    console.log(Animate.default);
-    console.log('\n');
-    await Animate.line();
-    console.log('\n');
-    await Animate.point();
-    console.log('\n');
-    await Animate.print();
-    Animate.wawe();
-}
-async function testConstruct() {
-    const animCustom = new Animate({
-        time: { mode: 'half', ms: 1500 },
-        replace: false,
-        backReplace: {
-            value: true,
-            point: '#',
-        },
-    });
-    console.log(animCustom.settings);
-    await animCustom.play();
-}
-testConstruct();
+
+// by parse-g
