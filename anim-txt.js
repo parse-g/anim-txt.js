@@ -1,5 +1,5 @@
 'use strict';
-export class AnimateTxT {
+ class AnimateTxT {
     static default = {
         time: 1500,
         text: 'Hello, world!',
@@ -100,3 +100,4 @@ export class AnimateTxT {
         await AnimateTxT.sleep(all_time);
     }
 }
+module.exports ={ AnimateTxT }

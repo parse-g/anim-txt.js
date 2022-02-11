@@ -18,7 +18,7 @@ interface Default {
   };
 }
 // экспорт класс анимаций
-export class AnimateTxT {
+class AnimateTxT {
   [key: string]: any;
   // Задание стандартных настроек
   static default: Default = {
@@ -167,5 +167,7 @@ export class AnimateTxT {
     await AnimateTxT.sleep(all_time); // ждать все время
   }
 }
+
+module.exports = { AnimateTxT }
 
 // by «parse-g»
