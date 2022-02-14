@@ -1,8 +1,8 @@
 {
   "name": "anim-txt.js",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "my 0wn TexT animator :333!",
-  "main": "anim-txt-main.js",
+  "main": "index.js",
   "scripts": {
     "test": ""
   },
@@ -28,5 +28,6 @@
   "homepage": "https://github.com/parse-g/anim-txt.js#readme",
   "devDependencies": {
     "@types/node": "^17.0.17"
-  }
+  },
+  "type": "module"
 }
