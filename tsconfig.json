@@ -1,10 +1,24 @@
 {
   "compilerOptions": {
+    // Module
     "target": "esnext",
     "module": "esnext",
-    "removeComments": true,
-    "strict": true,
+    "moduleResolution": "node",
+
+    // JS
     "allowJs": true,
-    "moduleResolution": "node"
-  }
+    "checkJs": true,
+
+    // Emit
+    "declaration": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    // Strict
+    "strict": true
+  },
+
+  "files": ["index.ts"] /* Files to compile */
 }
