@@ -4,9 +4,9 @@
 
 ### the text **animator**
 
-install
+### install
 
-```ps
+```shell
 npm i anim-txt.js
 ```
 
@@ -42,7 +42,7 @@ import { AnimateTxT } from 'anim-txt.js';
 
 #### **CONSTRUCTOR**
 
-Create new animation
+Create your animation
 
 ```js
 const settings = {
@@ -57,7 +57,7 @@ const settings = {
 const myAnim = new AnimateTxT(settings);
 ```
 
-settings
+#### settings
 
 ```ts
 {
@@ -74,16 +74,16 @@ settings
   };
 ```
 
-start custom animation ->
+start your animation ->
 
 ```js
-myAnim.start();
+myanimation.start();
 ```
 
-get settings ->
+get settings of animation ->
 
 ```js
-myAnim.settings;
+myanimation.settings;
 ```
 
 ---
